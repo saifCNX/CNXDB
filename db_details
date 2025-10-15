@@ -57,3 +57,32 @@ Select goe.* from GD_ORP_ON_EC goe where goe.stateCd ='RJ' and (goe.forCd= '49' 
             and (goe.acNac= 'A' OR goe.acNac='%') and (goe.duration= '15' OR goe.duration='%') and (goe.buyerType= 'F' OR goe.buyerType='%')
             and (goe.custType= 'I' OR goe.custType='%') and (goe.shareCap='%') and (goe.slab= '04' OR goe.slab='%')
             and (goe.taxComputation= 'P' OR goe.taxComputation='%');
+
+
+SELECT * FROM public.partner_master where email='Rakesh.Nagar@maruti.co.in'
+ 
+delete from public.partner_master where id ='96804'
+ 
+ 
+ 
+SELECT * FROM public.partner_user_master where partner ='96804'
+ 
+delete FROM public.partner_user_master where partner ='96804'
+ 
+ 
+ 
+SELECT * FROM public.auth_group_users where user_fkid ='70132'
+ 
+delete FROM public.auth_group_users where user_fkid ='70132'
+ 
+ 
+ 
+SELECT * FROM public.authorization_attributes where partner_id='96804'
+ 
+delete FROM public.authorization_attributes where partner_id='96804'
+ 
+ 
+ 
+SELECT * FROM public.partner_relation where partner2=96804
+ 
+delete from public.partner_relation where partner2=96804
