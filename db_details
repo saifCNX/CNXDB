@@ -1,0 +1,12 @@
+SELECT aa.*, pm.* 
+FROM authorization_attributes aa
+JOIN partner_master pm ON aa.partner_id = pm.id
+WHERE aa.application_id = 'c77cf6c0-c737-4aa0-acd3-a75332774a7d'
+AND pm.id IN (
+    SELECT pum.partner 
+    FROM partner_user_master pum
+    JOIN auth_group_users agu ON pum.id = agu.user_fkid
+    WHERE pum.is_active = TRUE 
+    AND agu.auth_group_fkid = 153
+    AND agu.active = TRUE
+);
