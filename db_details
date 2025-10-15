@@ -40,3 +40,15 @@ WHERE EC.STATE_CD = 'JH'
   AND (EC.CUST_TYPE = 'I' OR EC.CUST_TYPE = 'I')
   AND (EC.SHARE_CAP = '%' OR EC.SHARE_CAP = '%');
  
+
+
+SELECT DISTINCT *
+FROM gd_orp_on_esp
+WHERE state_cd = 'JH'
+  AND (for_cd = 'Y9' OR for_cd = '%')
+  AND (fueltype_cd = 'PET' OR fueltype_cd = '%')
+  AND (ac_nac = 'A' OR ac_nac = '%')
+  AND (duration = '15' OR duration = '%')
+  AND (buyer_type = 'F' OR buyer_type = '%')
+  AND (cust_type ='I' OR cust_type = '%')
+  AND (share_cap = '%' OR share_cap = '%');
