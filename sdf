@@ -32,3 +32,7 @@ delete FROM public.authorization_attributes where partner_id='181226'
 SELECT * FROM public.partner_relation where partner2=181226
  
 delete from public.partner_relation where partner2=181226
+
+
+
+ff0d03b8-188e-4ed1-a9e8-8ad9fc8b520f
