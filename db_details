@@ -86,3 +86,9 @@ delete FROM public.authorization_attributes where partner_id='96804'
 SELECT * FROM public.partner_relation where partner2=96804
  
 delete from public.partner_relation where partner2=96804
+
+
+
+
+Select * from sync_job_log order by created_date desc limit 10
+Select distinct * from sync_job_log order by created_date desc limit 25
