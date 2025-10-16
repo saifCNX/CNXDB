@@ -1,0 +1,34 @@
+SELECT * FROM public.partner_master where name1='PUNEET MEHRA'
+ 
+delete from public.partner_master where id ='181226'
+
+
+
+SELECT * FROM public.partner_attributes where partner_id='181226'
+
+delete FROM public.partner_attributes where partner_id='181226'
+
+ 
+ 
+ 
+SELECT * FROM public.partner_user_master where partner ='181226'
+ 
+delete FROM public.partner_user_master where partner ='181226'
+ 
+ 
+ 
+SELECT * FROM public.auth_group_users where user_fkid ='152329'
+ 
+delete FROM public.auth_group_users where user_fkid ='152329'
+ 
+ 
+ 
+SELECT * FROM public.authorization_attributes where partner_id='181226'
+ 
+delete FROM public.authorization_attributes where partner_id='181226'
+ 
+ 
+ 
+SELECT * FROM public.partner_relation where partner2=181226
+ 
+delete from public.partner_relation where partner2=181226
