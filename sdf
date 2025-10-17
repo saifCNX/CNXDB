@@ -36,3 +36,23 @@ delete from public.partner_relation where partner2=181226
 
 
 ff0d03b8-188e-4ed1-a9e8-8ad9fc8b520f
+
+
+
+
+
+SELECT aa.*, pm.* 
+FROM authorization_attributes aa
+JOIN partner_master pm ON aa.partner_id = pm.id
+WHERE aa.application_id = '3f6598d7-e5e6-4cee-9220-764bde033940'
+AND pm.id IN (
+    SELECT pum.partner 
+    FROM partner_user_master pum
+    JOIN auth_group_users agu ON pum.id = agu.user_fkid
+    WHERE pum.is_active = TRUE 
+    AND agu.auth_group_fkid = 105
+    AND agu.active = TRUE
+);
+	
+select * from auth_group_master where name='PSSF-NRM-UNAPPROVED'
+
